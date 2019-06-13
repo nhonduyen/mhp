@@ -221,9 +221,6 @@ add_action('after_setup_theme', 'mhp_content_width', 0);
 function mhp_scripts()
 {
 	wp_enqueue_style('mhp-style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version'));
-
-
-
 	wp_style_add_data('mhp-style', 'rtl', 'replace');
 
 	wp_enqueue_script('jquery', get_theme_file_uri('/js/jquery/jquery-2.2.4.min.js'), array(), '1.1', true);
