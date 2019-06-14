@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<i class="fas fa-drafting-compass"></i>
 
 <section class="ftco-services ftco-no-pt">
     <div class="container">
@@ -79,13 +78,15 @@
         </div>
 
         <div class="row">
-
+            <?php 
+           for($i = 1; $i <=6 ; $i++) {
+            ?>
             <!-- Single Featured Property -->
             <div class="col-12 col-md-6 col-xl-4">
                 <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="100ms">
                     <!-- Property Thumbnail -->
                     <div class="property-thumb">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/bg-img/feature1.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri() ."/img/bg-img/feature".$i.".jpg"; ?>" alt="">
 
 
                     </div>
@@ -93,7 +94,7 @@
                     <div class="property-content">
                         <h5>Villa ở quận 1</h5>
                         <p class="location"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/location.png" alt="">1 Cống Quỳnh Q1, HCM</p>
-                        <p>Biệt thự bác ba xây dựng 1 trệt 3 lầu.</p>
+                        <p><?php echo "Khách hàng ".$i; ?> Biệt thự bác ba xây dựng 1 trệt 3 lầu.</p>
                         <div class="property-meta-data d-flex align-items-end justify-content-between">
                             <div class="new-tag">
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/icons/new.png" alt="">
@@ -114,166 +115,8 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Single Featured Property -->
-            <div class="col-12 col-md-6 col-xl-4">
-                <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="200ms">
-                    <!-- Property Thumbnail -->
-                    <div class="property-thumb">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/bg-img/feature2.jpg" alt="">
-
-                    </div>
-                    <!-- Property Content -->
-                    <div class="property-content">
-                        <h5>Biệt thự quận 3</h5>
-                        <p class="location"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/location.png" alt="">5 Võ Văn Tần, Q3, HCM</p>
-                        <p>Biệt thự cô 6.</p>
-                        <div class="property-meta-data d-flex align-items-end justify-content-between">
-                            <div class="new-tag">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/icons/new.png" alt="">
-                            </div>
-                            <div class="bathroom">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/icons/bathtub.png" alt="">
-                                <span>2</span>
-                            </div>
-                            <i class="fa fa-bed custom-icon"></i>
-                            <span>2</span>
-                            <div class="space">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/icons/space.png" alt="">
-                                <span>120 m<sup>2</sup></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Featured Property -->
-            <div class="col-12 col-md-6 col-xl-4">
-                <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="300ms">
-                    <!-- Property Thumbnail -->
-                    <div class="property-thumb">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/bg-img/feature3.jpg" alt="">
-
-
-                    </div>
-                    <!-- Property Content -->
-                    <div class="property-content">
-                        <h5>Văn phòng chú 7</h5>
-                        <p class="location"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/location.png" alt="">11 Nguyễn Hữu Thọ, Q7, HCM.</p>
-                        <p>Biệt thự vườn chú 7.</p>
-                        <div class="property-meta-data d-flex align-items-end justify-content-between">
-                            <div class="new-tag">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/icons/new.png" alt="">
-                            </div>
-                            <div class="bathroom">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/icons/bathtub.png" alt="">
-                                <span>2</span>
-                            </div>
-                            <i class="fa fa-bed custom-icon"></i>
-                            <span>2</span>
-                            <div class="space">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/icons/space.png" alt="">
-                                <span>120 m<sup>2</sup></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Featured Property -->
-            <div class="col-12 col-md-6 col-xl-4">
-                <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="400ms">
-                    <!-- Property Thumbnail -->
-                    <div class="property-thumb">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/bg-img/feature4.jpg" alt="">
-
-                    </div>
-                    <!-- Property Content -->
-                    <div class="property-content">
-                        <h5>Biệt thự Hà Nội</h5>
-                        <p class="location"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/location.png" alt="">1 Hoàn Kiếm, HN</p>
-                        <p>Biệt thự cô 3.</p>
-                        <div class="property-meta-data d-flex align-items-end justify-content-between">
-                            <div class="new-tag">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/icons/new.png" alt="">
-                            </div>
-                            <div class="bathroom">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/icons/bathtub.png" alt="">
-                                <span>2</span>
-                            </div>
-                            <i class="fa fa-bed custom-icon"></i>
-                            <span>2</span>
-                            <div class="space">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/icons/space.png" alt="">
-                                <span>120 m<sup>2</sup></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Featured Property -->
-            <div class="col-12 col-md-6 col-xl-4">
-                <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="500ms">
-                    <!-- Property Thumbnail -->
-                    <div class="property-thumb">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/bg-img/feature5.jpg" alt="">
-
-                    </div>
-                    <!-- Property Content -->
-                    <div class="property-content">
-                        <h5>Biệt thự Đà Nẵng</h5>
-                        <p class="location"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/location.png" alt="">6 Trưng Trắc, DN</p>
-                        <p>Biệt thự anh 2.</p>
-                        <div class="property-meta-data d-flex align-items-end justify-content-between">
-                            <div class="new-tag">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/icons/new.png" alt="">
-                            </div>
-                            <div class="bathroom">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/icons/bathtub.png" alt="">
-                                <span>2</span>
-                            </div>
-                            <i class="fa fa-bed custom-icon"></i>
-                            <span>2</span>
-                            <div class="space">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/icons/space.png" alt="">
-                                <span>120 m<sup>2</sup></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Featured Property -->
-            <div class="col-12 col-md-6 col-xl-4">
-                <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="600ms">
-                    <!-- Property Thumbnail -->
-                    <div class="property-thumb">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/bg-img/feature6.jpg" alt="">
-                    </div>
-                    <!-- Property Content -->
-                    <div class="property-content">
-                        <h5>Biệt thự Biên Hòa</h5>
-                        <p class="location"><img src="<?php echo get_template_directory_uri(); ?>/img/icons/location.png" alt="">6 Nguyễn Văn Thuận, BH, DN</p>
-                        <p>Biệt thự chú 5.</p>
-                        <div class="property-meta-data d-flex align-items-end justify-content-between">
-                            <div class="new-tag">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/icons/new.png" alt="">
-                            </div>
-                            <div class="bathroom">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/icons/bathtub.png" alt="">
-                                <span>2</span>
-                            </div>
-                            <i class="fa fa-bed custom-icon"></i>
-                            <span>2</span>
-                            <div class="space">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/icons/space.png" alt="">
-                                <span>120 m<sup>2</sup></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           <?php } ?>
+           
         </div>
     </div>
 </section>
