@@ -9,9 +9,10 @@
  * @since 1.0.0
  */
 
-/**
- * Twenty Nineteen only works in WordPress 4.7 or later.
- */
+// Register Custom Navigation Walker
+//https://github.com/wp-bootstrap/wp-bootstrap-navwalker
+require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+
 if (version_compare($GLOBALS['wp_version'], '4.7', '<')) {
 	require get_template_directory() . '/inc/back-compat.php';
 	return;
@@ -224,9 +225,9 @@ function mhp_scripts()
 	wp_enqueue_style('mhp-style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version'));
 	wp_style_add_data('mhp-style', 'rtl', 'replace');
 
-	wp_enqueue_script('jquery', get_theme_file_uri('/js/jquery/jquery-2.2.4.min.js'), array(), '1.1', true);
-	wp_enqueue_script('popper', get_theme_file_uri('/js/popper.min.js'));
-	wp_enqueue_script('bootstrap', get_theme_file_uri('/js/bootstrap.min.js'), array(), '4.1.0', true);
+	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js', array(), null, false);
+	wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array(), null, false);
+	wp_enqueue_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array(), null, false);
 	wp_enqueue_script('plugins', get_theme_file_uri('/js/plugins.js'), array(), '1.1', true);
 	wp_enqueue_script('jqueryui', get_theme_file_uri('/js/jquery-ui.min.js'));
 
@@ -316,12 +317,12 @@ add_action('wp_head', 'mhp_colors_css_wrap');
 /**
  * SVG Icons class.
  */
-// require get_template_directory() . '/classes/class-mhp-svg-icons.php';
+ require get_template_directory() . '/classes/class-mhp-svg-icons.php';
 
 /**
  * Custom Comment Walker template.
  */
-//require get_template_directory() . '/classes/class-mhp-walker-comment.php';
+require get_template_directory() . '/classes/class-mhp-walker-comment.php';
 
 /**
  * Enhance the theme by hooking into WordPress.
@@ -331,14 +332,14 @@ require get_template_directory() . '/inc/template-functions.php';
 /**
  * SVG Icons related functions.
  */
-//require get_template_directory() . '/inc/icon-functions.php';
+require get_template_directory() . '/inc/icon-functions.php';
 
 /**
  * Custom template tags for the theme.
  */
-//require get_template_directory() . '/inc/template-tags.php';
+require get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Customizer additions.
  */
-//require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/customizer.php';

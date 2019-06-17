@@ -16,7 +16,7 @@
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="description" content="">
+    <meta name="description" content="xay dung minh hung phat long thanh dong nai">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -91,7 +91,18 @@
                         <?php
 
                        	if ( has_nav_menu( 'mhp-menu' ) ) {
-                            wp_nav_menu( array( 'theme_location' => 'mhp-menu','container' => false  ) );
+                            wp_nav_menu( array(
+                                 'theme_location' => 'mhp-menu',
+                                 //'menu_class'        => 'nav navbar-nav',
+                                 //'container'         => 'div',
+                                 //'container_class'   => 'collapse navbar-collapse',
+                                 //'container_class'   => 'cn-dropdown-item has-down pr12',
+                                 //'container_id'      => 'bs-example-navbar-collapse-1',
+                                 'container' => false,
+                                 'depth' => 2,
+                                 'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                                 'walker' => new wp_bootstrap_navwalker() )
+                                );
                          }
                         ?>
                         <?php if(  get_theme_mod( 'enable_search',1)  ){?>
@@ -119,41 +130,30 @@
     <section class="hero-area">
         <div class="hero-slides owl-carousel">
             <!-- Single Hero Slide -->
-            <div class="single-hero-slide bg-img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/bg-img/hero1.jpg);">
+            <?php 
+            $title = array("Xây dựng nhà", "Giá cả hợp lý", "Đảm bảo chất lượng");
+           
+            for ($i = 0; $i < 3; $i++) {
+            ?>
+            <div class="single-hero-slide bg-img" style="background-image: url(<?php echo get_template_directory_uri() ."/img/bg-img/hero".($i+1).".jpg"; ?>)">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
                             <div class="hero-slides-content">
-                                <h2 data-animation="fadeInUp" data-delay="100ms">Xây dựng nhà</h2>
+                                <h2 data-animation="fadeInUp" data-delay="100ms"><?php 
+                                if (is_page()) {
+                                    echo the_title();
+                                } else {
+                                    echo $title[$i]; 
+                                }
+                                ?></h2>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Single Hero Slide -->
-            <div class="single-hero-slide bg-img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/bg-img/hero2.jpg);">
-                <div class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <div class="col-12">
-                            <div class="hero-slides-content">
-                                <h2 data-animation="fadeInUp" data-delay="100ms">Giá cả hợp lý</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Single Hero Slide -->
-            <div class="single-hero-slide bg-img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/bg-img/hero3.jpg);">
-                <div class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <div class="col-12">
-                            <div class="hero-slides-content">
-                                <h2 data-animation="fadeInUp" data-delay="100ms">Đảm bảo chất lượng</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
+           
         </div>
     </section>
     <!-- ##### Hero Area End ##### -->

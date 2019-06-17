@@ -109,8 +109,8 @@
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
     </div>
 </footer>
-<?php if( get_theme_mod( 'enable_return_top',1) ){echo '<div id="gotoTop"><i class="fa fa-angle-up" aria-hidden="true"></i></div>';}?> 
-<?php wp_footer(); ?>
+<?php //if( get_theme_mod( 'enable_return_top',1) ){echo '<div id="gotoTop"><i class="fa fa-angle-up" aria-hidden="true"></i></div>';}?> 
+<?php wp_footer(); ?> 
 </body>
 
 </html>

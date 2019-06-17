@@ -99,7 +99,7 @@ add_filter( 'get_the_archive_title', 'mhp_get_the_archive_title' );
  * Determines if post thumbnail can be displayed.
  */
 function mhp_can_show_post_thumbnail() {
-	return apply_filters( 'twentynineteen_can_show_post_thumbnail', ! post_password_required() && ! is_attachment() && has_post_thumbnail() );
+	return apply_filters( 'mhp_can_show_post_thumbnail', ! post_password_required() && ! is_attachment() && has_post_thumbnail() );
 }
 
 /**
@@ -206,7 +206,7 @@ function mhp_add_ellipses_to_nav( $nav_menu, $args ) {
 		$nav_menu .= '<ul class="main-menu">';
 		$nav_menu .= '<li class="menu-item menu-item-has-children">';
 		$nav_menu .= '<button class="submenu-expand main-menu-more-toggle is-empty" tabindex="-1" aria-label="More" aria-haspopup="true" aria-expanded="false">';
-		$nav_menu .= '<span class="screen-reader-text">' . esc_html__( 'More', 'twentynineteen' ) . '</span>';
+		$nav_menu .= '<span class="screen-reader-text">' . esc_html__( 'More', 'mhp' ) . '</span>';
 		$nav_menu .= mhp_get_icon_svg( 'arrow_drop_down_ellipsis' );
 		$nav_menu .= '</button>';
 		$nav_menu .= '<ul class="sub-menu hidden-links">';
@@ -270,7 +270,7 @@ function mhp_add_dropdown_icons( $output, $item, $depth, $args ) {
 		// @todo Only do this for nested submenus? If on a first-level submenu, then really the link could be "#" since the desire is to remove the target entirely.
 		$link = sprintf(
 			'<button class="menu-item-link-return" tabindex="-1">%s',
-			twentynineteen_get_icon_svg( 'chevron_left', 24 )
+			mhp_get_icon_svg( 'chevron_left', 24 )
 		);
 
 		// replace opening <a> with <button>
