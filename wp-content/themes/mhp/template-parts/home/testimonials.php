@@ -35,4 +35,3 @@
         </div>
     </div>
 </section>
-<!-- ##### Testimonials Area End ##### -->

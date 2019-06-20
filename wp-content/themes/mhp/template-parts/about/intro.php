@@ -4,12 +4,14 @@
         <div class="row">
             <div class="col-12 col-lg-8">
                 <div class="section-heading text-left wow fadeInUp" data-wow-delay="250ms">
-                    <h2>Chúng tôi xây dựng ngôi nhà hoàn hảo nhất</h2>
+                    <h2>Chúng tôi yêu những ngôi nhà hoàn hảo</h2>
                     <p>Xây dựng bằng cả con tim</p>
                 </div>
                 <div class="about-content">
                     <img class="wow fadeInUp" data-wow-delay="350ms" src="<?php echo get_template_directory_uri(); ?>/img/bg-img/about.jpg" alt="">
-                    <p class="wow fadeInUp" data-wow-delay="450ms">Mô tả về chúng tôi.</p>
+                    <p class="wow fadeInUp" data-wow-delay="450ms">
+                        Mô tả về chúng tôi.
+                    </p>
                 </div>
             </div>
 

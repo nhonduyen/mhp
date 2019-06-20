@@ -22,7 +22,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>Minh Hưng Phát - Kiến tạo tương lai | Home</title>
+    <title><?php wp_title(); ?></title>
 
     <!-- Favicon  -->
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/core-img/favicon.ico">
@@ -93,15 +93,10 @@
                        	if ( has_nav_menu( 'mhp-menu' ) ) {
                             wp_nav_menu( array(
                                  'theme_location' => 'mhp-menu',
-                                 //'menu_class'        => 'nav navbar-nav',
-                                 //'container'         => 'div',
-                                 //'container_class'   => 'collapse navbar-collapse',
-                                 //'container_class'   => 'cn-dropdown-item has-down pr12',
-                                 //'container_id'      => 'bs-example-navbar-collapse-1',
+                              
                                  'container' => false,
-                                 'depth' => 2,
-                                 'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
-                                 'walker' => new wp_bootstrap_navwalker() )
+                                 'depth' => 0
+                                  )
                                 );
                          }
                         ?>
